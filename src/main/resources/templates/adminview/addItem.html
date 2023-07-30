@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>MyShop</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<header>
+  <span class="title">MyShop</span>
+</header>
+
+<div class="main-content">
+
+  <div class="summary">
+    <h1>Add Product</h1>
+
+    <form th:action="@{/admin}" method="post">
+      <label>Name</label>
+      <input type="text" name="name" required>
+      <label >Price</label>
+      <input type="number" min="0.01" step="0.01" name="price" required>
+      <label>urlImg</label>
+      <input type="text" name="imgUrl">
+      <button type="submit">Add Me</button>
+    </form>
+
+  </div>
+</div>
+</body>
+</html>
